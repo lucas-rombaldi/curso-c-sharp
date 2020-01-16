@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curso.Language", "src\Curso.ValueReferenceTypes\Curso.Language.csproj", "{7E4763E8-99A0-47D1-9BD3-4F885EDC594E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Curso.Language", "src\Curso.Language\Curso.Language.csproj", "{7E4763E8-99A0-47D1-9BD3-4F885EDC594E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curso.OOP", "src\Curso.OOP\Curso.OOP.csproj", "{A64043D7-5FE3-4A3B-B6FF-417587046B11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Curso.OOP", "src\Curso.OOP\Curso.OOP.csproj", "{A64043D7-5FE3-4A3B-B6FF-417587046B11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
