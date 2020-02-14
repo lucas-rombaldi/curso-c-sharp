@@ -9,16 +9,10 @@ namespace Curso.Language.Samples
     {
         public override void PrintContent()
         {
-            //Language Integrated Query
-            var lista = new List<string>()
-            {
-                "João",
-                "Maria",
-                "José",
-                "Cleiton"
-            };
+            var lista = new List<string>(){ "João", "Maria", "José", "Cleiton" };
 
-            var nomesComJota = lista.Where(str => str.StartsWith("J"));
+            var nomesComJota = lista.Where(str => str.StartsWith("J"))
+                .Take(2);
             Console.WriteLine("Nomes com J...");
             foreach (var nome in nomesComJota)
                 Console.WriteLine($"- {nome}");
@@ -32,6 +26,11 @@ namespace Curso.Language.Samples
                 Console.WriteLine($"- {nome}");
 
             var pessoas = new List<Pessoa>() { new Pessoa(10, "João"), new Pessoa(5, "Maria"), new Pessoa(7, "José"), new Pessoa(20, "Cleiton"), new Pessoa(30, "Jeferson") };
+
+            var pessoasComJota2 =   from pessoa
+                                    in pessoas
+                                    where pessoa.Nome.StartsWith("J")
+                                    select pessoa.Codigo;
 
             var pessoasComJota = pessoas.Where(str => str.Nome.StartsWith("J"))
                                         .OrderBy(o => o.Codigo);

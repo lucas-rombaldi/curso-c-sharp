@@ -42,13 +42,14 @@ namespace Curso.Language.Samples
         }
     }
 
-    public class MyCustomList : IEnumerable<string>
+    public class MyCustomList : IEnumerable<int>
     {
-        public IEnumerator<string> GetEnumerator()
+        public IEnumerator<int> GetEnumerator()
         {
-            yield return "A";
-            yield return "B";
-            yield return "C";
+            for (int i = 0; i < 100; i++)
+            {
+                yield return new Random().Next(1, 999);
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
