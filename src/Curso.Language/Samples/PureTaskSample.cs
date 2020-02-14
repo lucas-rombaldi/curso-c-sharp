@@ -33,7 +33,7 @@ namespace Curso.Language.Samples
 
         private void Print(string str)
         {
-            //Thread-safe (garante que apenas uma thread irá acessar este recurso.
+            //Thread-safe (garante que apenas uma thread irá acessar este recurso).
             lock (lockObject)
             {
                 Console.WriteLine(str);

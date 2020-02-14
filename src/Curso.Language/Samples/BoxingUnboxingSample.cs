@@ -16,6 +16,39 @@ namespace Curso.Language.Samples
             object objeto2 = 20;
             int inteiro2 = (int)objeto2;
             Console.WriteLine($"Unboxing do object 20 para int = {inteiro2}");
+
+            object meuObjeto = new MinhaClasse(10);
+            MinhaClasse minhaClasse = (MinhaClasse)meuObjeto;
+            MinhaClasse minhaClasse2 = meuObjeto as MinhaClasse;
+
+            MinhaSegundaClasse minhaClasse4 = meuObjeto as MinhaSegundaClasse;
+            MinhaSegundaClasse minhaClasse3 = (MinhaSegundaClasse)meuObjeto;            
         }
+    }
+
+    public class MinhaClasse
+    {
+        public MinhaClasse(int codigo)
+        {
+            Codigo = codigo;
+        }
+
+        public int Codigo { get; set; }
+
+        public void TesteMetodo()
+        { }
+    }
+
+    public class MinhaSegundaClasse
+    {
+        public MinhaSegundaClasse(int codigo)
+        {
+            Codigo = codigo;
+        }
+
+        public int Codigo { get; set; }
+
+        public void TesteMetodo()
+        { }
     }
 }
